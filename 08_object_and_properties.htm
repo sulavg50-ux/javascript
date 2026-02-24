@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and properties</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //student is object here that store data in organized way
+let student={
+    name:"sulav",
+    age:17,
+    city:'kathmandu'
+};
+console.log(student.name)//student.name is properties here
+console.log(student["city"])//bracket notation
+
+//adding new property
+student.country="Nepal"
+console.log(student)//checking if country added or not 
+
+//updating new properties
+student.age=90
+console.log(student)
+
+//deleting object 
+delete student.city
+console.log(student)
+
+
+//can user function inside object
+let college={
+    name:"Sulav",
+    greet:function(){
+console.log("hello",college.name)
+    }
+}
+college.greet()
+</script>
+
+
+</html>
