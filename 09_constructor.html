@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //class constructor
+class Person{
+    constructor(name,age){
+        this.name=name,
+        this.age=age
+    }
+    display(){
+console.log(this.name+" "+this.age)
+    }
+}
+let user=new Person("Sulav",18)
+user.display()
+
+//default values
+class User {
+  constructor(username = "Guest", role = "User") {
+    this.username = username;
+    this.role = role;
+  }
+}
+
+const u1 = new User();
+console.log(u1);  
+
+// constructor validation
+class Person{
+    constructor(age){
+        if(age >= 18){
+            console.log("Allowed");
+        } else {
+            console.log("Not Allowed");
+        }
+
+        this.age = age;
+    }
+}
+
+let g = new Person(20);
+console.log(g);
+
+//constructorin inheritance(super)
+class Person{
+    constructor(name,age){
+        this.name=name
+        this.age=age
+    }
+}
+class Student extends Person{
+    constructor(name,course){
+        super(name);//calls parent constructor
+        this.course=course
+
+    }
+}
+let p1=new Student("Sulav","BIT")
+console.log(p1)
+</script>
+</html>

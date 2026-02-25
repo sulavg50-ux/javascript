@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inheritance</title>
+</head>
+<body>
+
+<script>
+class Animal{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    speak(){
+        console.log(this.name + " makes a sound");
+    }
+}
+
+class Person extends Animal{
+    constructor(name, age, breed){
+        super(name, age);   // MUST call first
+        this.breed = breed;
+    }
+
+    bark(){
+        console.log("Woof");
+    }
+}
+
+let p1 = new Person("Sulav", 18, "Human");
+
+p1.speak();  // from Animal
+p1.bark();   // from Person
+
+console.log(p1);
+</script>
+
+</body>
+</html>
